@@ -1,29 +1,17 @@
 package EncryptionDecryption;
 
-import javax.swing.*;
 import java.util.Scanner;
 
 public class Application {
 
     public static void main(String[] args) {
 
-        JFrame frame = new JFrame();
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("Encryptor-3000");
-        frame.setSize(500,500);
-        frame.setResizable(false);
-
-
-
-
-
-
-
-
-
+        AppFrame appFrame = new AppFrame();
 
         Encryption AES = new Encryption();
+
+
+
 
         // Create a Scanner object to read user input
         Scanner scanner = new Scanner(System.in);
