@@ -1,26 +1,41 @@
 package EncryptionDecryption;
 
-import java.util.Scanner;
-
+/*
+To Do:
+Trim white spaces on text before encrypting/decrypting.
+Add error message if decryption is not possible.
+ */
 public class Application {
+
+    Encryption AES = new Encryption();
 
     public static void main(String[] args) {
 
-        AppFrame appFrame = new AppFrame();
+        AppFrame appFrame = new AppFrame(new Application());
+    }
 
-        Encryption AES = new Encryption();
+    public String Encrypt(String OriginalString, String secretKey) {
+        return AES.encrypt(OriginalString, secretKey);
+    }
+
+    public String Decrypt(String OriginalString, String secretKey) {
+        return AES.decrypt(OriginalString, secretKey);
+    }
+}
 
 
 
 
-        // Create a Scanner object to read user input
-        Scanner scanner = new Scanner(System.in);
 
-        // Prompt the user for input
+/*
+    // Create a Scanner object to read user input
+    Scanner scanner = new Scanner(System.in);
+
+// Prompt the user for input
         System.out.print("Enter a key: ");
 
-        // Read the input string and set the key
-        final String secretKey = scanner.nextLine();
+// Read the input string and set the key
+final String secretKey = scanner.nextLine();
 
         // Prompt the user for input
         System.out.println("Key has been set.");
@@ -43,7 +58,5 @@ public class Application {
         System.out.println();
         System.out.println("Decryption test:");
         System.out.println(decSite);
+*/
 
-    }
-
-}
