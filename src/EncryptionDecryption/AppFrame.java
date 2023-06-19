@@ -81,10 +81,10 @@ public class AppFrame extends JFrame {
         JButton decBtn = new JButton("< Decrypt");
         decBtn.setBounds(190,200,100,30);
         decBtn.addActionListener(e -> {
-
             key = keyText.getText();
             String encryptedT = decText.getText();
             String decryptedText = application.Decrypt(encryptedT, key);
+            encText.setText(decryptedText);
         });
         panel.add(decBtn);
 
